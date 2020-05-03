@@ -1,0 +1,268 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin:0px;
+    padding:0px;
+    cursor: pointer;
+    user-select: none;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+.arrow{
+    bottom:80px;
+    right: 30px;
+    position: fixed;
+    font-size: 35px;
+}
+.arrow a{
+    color: greenyellow;
+}
+.navbar{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffa600d5;
+}
+.title img{
+    height: 90px;
+    width: auto;
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.links li{
+    list-style: none;
+    font-size: 20px;
+}
+.links li a{
+    text-decoration: none;
+    color: black;
+    border: 2px;
+    border-radius: 25px;
+    padding: 0.5rem 2rem;
+    display: block;
+}
+
+.links li a:hover , .links li a:active{
+    background-color: #cc8603fd;
+    border: 2px solid white;
+    border-radius: 25px;
+    color: blanchedalmond;
+    transition:0.5s;
+}
+.toogleb{
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.toogleb .bar{
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+@media (max-width: 800px){
+    .toogleb{
+        display: flex;
+    }
+    .links{
+        display: none;
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .links ul{
+        width: 100%;
+        flex-direction: column;
+    }
+    .links li{
+        text-align: center;
+    }
+    .links li a{
+        padding: .5rem 1rem;
+    }
+    .links.active{
+        display: flex;
+    }
+}
+
+body{
+    background-color:rgb(100, 99, 99) ;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:16px;
+    line-height:1.6em;
+    margin:0px;
+    padding:0px;
+}
+
+
+.container{
+    width:100%;
+    text-align: center;
+    padding:20px 30px;
+}
+.container h1{
+    color: white;
+    padding: 10px 10px;
+}
+
+
+.box{
+    padding-top: 20px;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 15px;
+    margin: 0 auto;
+}
+
+.card{
+    position: relative;
+    align-content: center;
+    width: 300px;
+    height: 350px;
+    background: #00305f;
+    margin: 30px;
+    border-radius: 4px;
+    box-shadow:0 5px 30px rgba(0, 0, 0, 0.8);
+}
+
+.card:before,
+.card:after
+{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: #003569;
+    transition: 0.5s;
+    z-index:-1;
+}
+
+.card:hover:before{
+  transform: rotate(20deg);
+  box-shadow:0 5px 30px rgba(0, 0, 0, 0.8);
+}
+
+.card:hover:after{
+  transform: rotate(10deg);
+  box-shadow:0 5px 30px rgba(0, 0, 0, 0.8);
+}
+
+.card .imgBx{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: #222;
+  transition: 0.5s;
+  z-index: 1;
+}
+  
+.card:hover .imgBx{
+    bottom: 150px;
+}
+
+.card .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.card .details{
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    height: 130px;
+    text-align: center;
+}
+.card .details ul li{
+    list-style: none;
+    margin: 10px;
+    font-size: 30px;
+    display: inline-block;
+    transition: 0.5s;
+}
+.card .details ul li a {
+    padding: 8px 10px;
+    border: 1.5px solid #FF851B;
+    border-radius: 50%;
+    display: block;
+    background: #FF851B;
+    color:black;
+    transition: 0.5s;
+}
+.card .details ul li a:hover{
+    background-color: white;
+    transition: 0.5s;
+}
+.card .details ul li:nth-child(1) a:hover{
+    color:#0077B5;
+}
+.card .details ul li:nth-child(2) a:hover{
+    color:#b31c38;
+}
+.card .details ul li:nth-child(3) a:hover{
+    color:black;
+}
+
+
+
+.card .details h2{
+   margin: 0;
+   padding: 0;
+   font-weight: 600;
+   font-size: 20px;
+   color: #FF851B;
+   text-transform: uppercase;
+} 
+
+.card .details h2 span{
+  font-weight: 500;
+  font-size: 16px;
+  color: #3D9970;
+  display: block;
+  margin-top: 5px;
+} 
+.container{
+    width:100%;
+    margin:auto;
+    overflow:hidden;
+
+}
+#main-footer{
+    margin-top: 0;
+    background-color:rgb(19, 18, 18);
+    color:#fff;
+    text-align:center;
+    padding:20px 0;
+}
+#main-footer a{
+    text-decoration: none;
+    color: #e84118;
+}
