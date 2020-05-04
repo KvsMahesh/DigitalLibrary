@@ -11,6 +11,10 @@ html{
 ::-webkit-scrollbar{
     width: 0;
 }
+.slider img{
+    width: 100%;
+    height: auto;
+}
 .arrow{
     bottom:80px;
     right: 40px;

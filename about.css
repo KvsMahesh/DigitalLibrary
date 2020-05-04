@@ -218,17 +218,19 @@ body{
     transition: 0.5s;
 }
 .card .details ul li a:hover{
-    background-color: white;
     transition: 0.5s;
 }
 .card .details ul li:nth-child(1) a:hover{
+    background-color: white;
     color:#0077B5;
 }
 .card .details ul li:nth-child(2) a:hover{
-    color:#b31c38;
+    background-color: white;
+    color:#ff002f;
 }
 .card .details ul li:nth-child(3) a:hover{
-    color:black;
+    color:white;
+    background-color: black;
 }
 
 
